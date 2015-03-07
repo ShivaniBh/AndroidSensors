@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/relative"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:textSize="30dp"
+        android:id="@+id/name2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Main Menu" />
+
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Accelerometer"
+        android:id="@+id/accelerometerButton"
+        android:layout_below="@+id/name2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Magnetic Field"
+        android:id="@+id/magneticFieldButton"
+        android:layout_below="@+id/accelerometerButton"
+        android:layout_alignLeft="@+id/accelerometerButton"
+        android:layout_alignStart="@+id/accelerometerButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Gravity"
+        android:id="@+id/gravityButton"
+        android:layout_below="@+id/magneticFieldButton"
+        android:layout_alignLeft="@+id/magneticFieldButton"
+        android:layout_alignStart="@+id/magneticFieldButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Proximity"
+        android:id="@+id/proximityButton"
+        android:minWidth="100dp"
+        android:layout_below="@+id/gravityButton"
+        android:layout_alignLeft="@+id/gravityButton"
+        android:layout_alignStart="@+id/gravityButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Pressure"
+        android:id="@+id/pressureButton"
+        android:layout_below="@+id/proximityButton"
+        android:layout_alignLeft="@+id/proximityButton"
+        android:layout_alignStart="@+id/proximityButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:id="@+id/temperatureButton"
+        android:layout_below="@+id/pressureButton"
+        android:layout_alignLeft="@+id/pressureButton"
+        android:layout_alignStart="@+id/pressureButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Linear Acceleration"
+        android:id="@+id/linearAccelerationButton"
+        android:layout_below="@+id/temperatureButton"
+        android:layout_alignLeft="@+id/temperatureButton"
+        android:layout_alignStart="@+id/temperatureButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Rotation Vector"
+        android:id="@+id/rotationVectorButton"
+        android:layout_below="@+id/linearAccelerationButton"
+        android:layout_alignLeft="@+id/linearAccelerationButton"
+        android:layout_alignStart="@+id/linearAccelerationButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Gyroscope"
+        android:id="@+id/gyroscopeButton"
+        android:layout_below="@+id/rotationVectorButton"
+        android:layout_alignLeft="@+id/rotationVectorButton"
+        android:layout_alignStart="@+id/rotationVectorButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="GPS"
+        android:id="@+id/gpsButton"
+        android:layout_below="@+id/gyroscopeButton"
+        android:layout_alignLeft="@+id/gyroscopeButton"
+        android:layout_alignStart="@+id/gyroscopeButton" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="View Database Entries"
+        android:id="@+id/databaseButton"
+        android:layout_below="@+id/gpsButton"
+        android:layout_alignLeft="@+id/gpsButton"
+        android:layout_alignStart="@+id/gpsButton" />
+
+
+</RelativeLayout>
