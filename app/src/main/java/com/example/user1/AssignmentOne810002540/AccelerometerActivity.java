@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class AccelerometerActivity extends Activity implements SensorEventListener {
+public class AccelerometerActivity extends Activity implements SensorEventListener, Runnable {
 
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
@@ -54,9 +54,12 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
             @Override
             public void onClick(View v) {
                 //start
+
                 sensorStart();
+
             }
         });
+
 
         offButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +95,8 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
 
     @Override
     public void onSensorChanged(SensorEvent event) {
+
+
             float x = event.values[0];
             float y = event.values[1];
             float z = event.values[2];
@@ -160,5 +165,10 @@ public class AccelerometerActivity extends Activity implements SensorEventListen
     protected void onPause(){
         super.onPause();
         mSensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void run() {
+
     }
 }

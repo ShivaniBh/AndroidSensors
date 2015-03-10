@@ -13,21 +13,17 @@ import java.util.List;
 
 public class DatabaseActivity extends Activity {
 
-
-  //  TextView tv;
     ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_database);
 
-      //  tv = (TextView)findViewById(R.id.databaseResults);
+
         lv = (ListView)findViewById(R.id.databaseResults);
         MySQLiteHelper db = new MySQLiteHelper(this);
 
-      //  String str;
-     //   str = db.getAllSensorCoordinates();
-      //  tv.setText(str);
+
 
         //get sensor coordinates as a List
         List sensorResults = new ArrayList<String>();

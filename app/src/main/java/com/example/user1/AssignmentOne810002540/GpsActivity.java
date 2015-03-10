@@ -52,10 +52,24 @@ public class GpsActivity extends Activity {
                                 "Added to database", Toast.LENGTH_LONG).show();
                     }
 
-                    String latitudeString = String.valueOf(b.getLatitude());
+                        new Thread(new Runnable() {
+                            public void run() {
+                                gps = new GpsTracker(GpsActivity.this);
+                                final double latitude = gps.getLatitude();
+                                final double longitude = gps.getLongitude();
+                                if (latitude!=0) {
+                                    Runnable runnable = new Runnable() {
+                                        public void run() {
+                                            tv.setText("Latitude: " + latitude + "\nLongtitude " + longitude);
+                                        }
+                                    };
+                                }
+                            }
+                        }).start();
 
 
-                    //query db and determine if these coordinates are different/worthy
+
+                    //query db and determine if these coordinates are significant
                     //if so, store them
 
 
