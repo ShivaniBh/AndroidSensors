@@ -23,7 +23,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // SQL statement to create book table
+        // SQL statement to create coordinate table
         String CREATE_GPS_TABLE = "CREATE TABLE gpsCoordinates ( " +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "longtitude REAL, "+
@@ -72,6 +72,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     private static final String[] COLUMNS = {KEY_ID,KEY_LONGTITUDE,KEY_LATITUDE};
 
     private static final String[] COLUMNS2 = {KEY_ID2,KEY_SENSORNAME,KEY_XVAL, KEY_YVAL, KEY_ZVAL};
+
 
     public void addBook(Coordinate coord){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -180,7 +181,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     }
 
 
-    //public List<Book> getAllCoordinates() {
+
     public String getAllCoordinates() {
         List<Coordinate> coords = new LinkedList<Coordinate>();
 
@@ -205,7 +206,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
-        //return coords; //return list of books
+        //return coords;
         return s;
     }
 
